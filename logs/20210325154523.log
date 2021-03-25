@@ -1,0 +1,4 @@
+2021-03-25 15:45:23,106 test_case.py[line:41]INFO - 【开始执行测试用例：CRM登录-获取ssesionId】
+2021-03-25 15:45:23,109 test_case.py[line:41]INFO - 【开始执行测试用例：获取ticket】
+2021-03-25 15:45:23,119 test_case.py[line:41]INFO - 【开始执行测试用例：CRM登录】
+2021-03-25 15:45:23,120 test_case.py[line:41]INFO - 【开始执行测试用例：新增用户】

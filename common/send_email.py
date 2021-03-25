@@ -1,6 +1,7 @@
+# coding=utf-8
 from email.mime.multipart import MIMEMultipart
-from email.header import Header
 from email.mime.text import MIMEText
+from email.header import Header
 from config import read_email_config
 import smtplib
 
@@ -27,6 +28,7 @@ def send_email(subject, mail_body, file_names=list()):
         att = MIMEText(open(file_name, "rb").read(), "base64", "utf-8")
         att["Content-Type"] = "application/octet-stream"
         att["Content-Disposition"] = "attachment;filename='report.html'"  # filename为邮件中附件显示的名字
+        # 将附件内容插入邮件中
         msg.attach(att)
 
     # 登录并发送邮件
@@ -47,6 +49,6 @@ def send_email(subject, mail_body, file_names=list()):
 if __name__ == '__main__':
     subject = "测试标题"
     mail_body = "测试本文"
-    receiver = "780156051@qq.com,hb_zhijun@163.com"  # 接收人邮件地址 用逗号分隔
-    file_names = [r'D:\PycharmProjects\AutoTest\result\2020-02-23 13_38_41report.html']
+    receiver = "984827201@qq.com,Sen88_8@163.com"  # 接收人邮件地址 用逗号分隔
+    file_names = [r'D:\Sen\code\python\AutoTest\report\2020_02_24_11_43_24-report.html']
     send_email(subject, mail_body, receiver, file_names)

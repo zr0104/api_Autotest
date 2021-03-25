@@ -1,3 +1,4 @@
+#coding=utf-8
 import os
 import time
 import unittest
@@ -5,10 +6,12 @@ from HTMLTestRunner import HTMLTestRunner
 from common.send_email import send_email
 
 # 获取当前py文件绝对路径
-cur_path = os.path.dirname(os.path.realpath(__file__))
 
+#cur_path1 = os.path.dirname(os.path.realpath(__file__))
+cur_path =os.getcwd()
+#print(cur_path1,cur_path2)
 
-# 1: 加载测试用例
+# 1: 加载测试用例:  测试用例路径，unittest执行所有case_*.py
 def all_test():
     case_path = os.path.join(cur_path, "testcase")
     suite = unittest.TestLoader().discover(start_dir=case_path, pattern="test_*.py", top_level_dir=None)
@@ -20,10 +23,10 @@ def run():
     now = time.strftime("%Y_%m_%d_%H_%M_%S")
     # 测试报告路径
     file_name = os.path.join(cur_path, "report") + "/" + now + "-report.html"
+    print(file_name)
     f = open(file_name, "wb")
-    runner = HTMLTestRunner(stream=f, title="接口自动化测试报告",
-                            description="环境：windows 10 浏览器：chrome",
-                            tester="wangzhijun")
+    runner = HTMLTestRunner(stream=f, title="万邦Sen的接口自动化测试报告",
+                            description="环境：windows 10 浏览器：chrome")
     runner.run(all_test())
     f.close()
 
@@ -49,7 +52,8 @@ if __name__ == "__main__":
     run()
     report_path = os.path.join(cur_path, "report")  # 测试报告路径
     report_file = get_report(report_path)  # 测试报告文件
-    subject = "Esearch接口测试报告"  # 邮件主题
+    print(report_path,report_file)
+    subject = "Sen万邦接口测试报告"  # 邮件主题
     file_names = [report_file]  # 邮件附件
     # 发送邮件
     send_mail(subject, report_file, file_names)

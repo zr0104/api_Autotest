@@ -1,7 +1,10 @@
+# coding=utf-8
 import xlrd
 from xlrd import xldate_as_tuple
 import openpyxl
 import datetime
+import os
+import time
 
 
 class ExcelData():
@@ -43,7 +46,8 @@ class ExcelData():
     def write(self, rowNum, colNum, result):
         workbook = openpyxl.load_workbook(self.file_path)
         table = workbook.get_sheet_by_name(self.sheet_name)
-        table = workbook.active
+        # table.get_sheets("测试用例").write(rowNum,colNum,result)
+        # table = workbook.active
 
         # rows = table.max_row
         # cols = table.max_column
@@ -55,14 +59,25 @@ class ExcelData():
         # 指定单元格中写入数据
         table.cell(rowNum, colNum, result)
         workbook.save(self.file_path)
+        time.sleep(1)
 
 
 if __name__ == '__main__':
-    file_path = "D:\python_data\接口自动化测试.xlsx"
+    # 1.绝对路径
+    # file_path = "D:\\Sen\\code\\python\\AutoTest\\data\\接口自动化测试.xls"
+    # 拼凑相对路径+当前文件夹，构成绝对路径
+    file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/", "接口自动化测试.xls"))
+    print(file_path)
+    # 2.生成当前路径:错误多了当前文件夹
+    # weight_path = os.path.join(os.path.dirname(__file__), "data")
+    # print(weight_path)  #D:/Sen/code/python/AutoTest/common\data
+    # os.getcwd()生成当前路径 #D:/Sen/code/python/AutoTest/common\data\接口自动化测试.xls
+    # file_path = os.path.join(os.getcwd(), "data", "接口自动化测试.xls")
     sheet_name = "测试用例"
     data = ExcelData(file_path, sheet_name)
     datas = data.readExcel()
-    print(datas)
+    # print(datas[2])
+    # print(datas)
     print(type(datas))
     for i in datas:
         print(i)

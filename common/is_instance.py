@@ -1,3 +1,4 @@
+# coding:utf-8
 class IsInstance:
 
     def get_instance(self, value, check):

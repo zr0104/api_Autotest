@@ -1,0 +1,16 @@
+2021-03-09 16:21:10,769 test_case.py[line:31]INFO - 【开始执行测试用例：CRM登录-获取ssesionId】
+2021-03-09 16:21:10,770 test_case.py[line:31]INFO - 【开始执行测试用例：获取ticket】
+2021-03-09 16:21:10,770 test_case.py[line:35]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"ticket":"F2546BC6425C4D1E9E5791AAD57A7501"', '"rememberMe":0}}']
+2021-03-09 16:21:10,770 test_case.py[line:37]INFO - 请求url：http://test.passport.be.lvdatong.com/sso/generateTicket
+2021-03-09 16:21:10,770 test_case.py[line:38]INFO - 请求参数：{'sessionId': '8B617BAB74B74F44ADF31250CA257215'}
+2021-03-09 16:21:10,844 test_case.py[line:41]INFO - 返回结果：{'code': '-2', 'msg': 'sessionId已经失效，请重新登录', 'result': None}
+2021-03-09 16:21:10,845 test_case.py[line:31]INFO - 【开始执行测试用例：CRM登录】
+2021-03-09 16:21:10,845 test_case.py[line:35]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"token":"BA3A7E80C6654E779E055FF3467572A7"', '"rememberMe":0', '"rememberMeSeconds":null', '"loginExpireSeconds":null', '"uuid":"09F6B3E6356E4881D6494F9A60C19E22"}}']
+2021-03-09 16:21:10,845 test_case.py[line:37]INFO - 请求url：http://test.portal.be.lvdatong.com/security/getToken
+2021-03-09 16:21:10,845 test_case.py[line:38]INFO - 请求参数：{'ticket': 'F2546BC6425C4D1E9E5791AAD57A7501', 'uuid': '09F6B3E6356E4881D6494F9A60C19E22'}
+2021-03-09 16:21:10,853 test_case.py[line:41]INFO - 返回结果：{'code': '01002', 'msg': 'SSO验证ticket失败，过期或不存在', 'result': None}
+2021-03-09 16:21:10,854 test_case.py[line:31]INFO - 【开始执行测试用例：新增用户】
+2021-03-09 16:21:10,854 test_case.py[line:35]INFO - 用例设置检查点：['{"code":"0"', '"msg":"ok"', '"result":null}']
+2021-03-09 16:21:10,854 test_case.py[line:37]INFO - 请求url：http://test.admin.be.lvdatong.com/customer/addCustomer
+2021-03-09 16:21:10,854 test_case.py[line:38]INFO - 请求参数：{'customerId': '', 'name': 'TEST法务咨询有限公司00078', 'shortName': '', 'cusSource': '2', 'cusType': '1', 'license': '123565656550078', 'province': 3624, 'city': 3677, 'district': 3685, 'address': '详细地址详细地址详细地址888', 'legalPerson': '', 'businessScope': '', 'tradeId': '', 'employees': '', 'phone': '', 'email': '', 'fax': '', 'remark': '', 'customerContacts': [{'contactId': '', 'contactName': 'Sen78', 'sex': '1', 'mobile': '13246889978', 'job': '', 'dept': '', 'position': '', 'telephone': '', 'qq': '', 'email': '', 'wechat': '', 'type': '1', 'contactRole': '2'}], 'customerParticipants': [], 'type': '0', 'companyType': '', 'website': '', 'registeredCapital': '', 'anotherPhone': '', 'refereeMobile': '', 'masterMobile': ''}
+2021-03-09 16:21:10,860 test_case.py[line:41]INFO - 返回结果：{'code': '-1', 'msg': '请检查入参，没有传入Token'}

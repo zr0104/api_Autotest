@@ -1,0 +1,11 @@
+2021-03-08 15:30:20,095 test_case.py[line:31]INFO - 【开始执行测试用例：CRM登录-获取ssesionId】
+2021-03-08 15:30:20,097 test_case.py[line:31]INFO - 【开始执行测试用例：获取ticket】
+2021-03-08 15:30:20,097 test_case.py[line:35]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"ticket":"F2546BC6425C4D1E9E5791AAD57A7501"', '"rememberMe":0}}']
+2021-03-08 15:30:20,097 test_case.py[line:37]INFO - 请求url：http://test.passport.be.lvdatong.com/sso/generateTicket
+2021-03-08 15:30:20,098 test_case.py[line:38]INFO - 请求参数：{'sessionId': '8B617BAB74B74F44ADF31250CA257215'}
+2021-03-08 15:30:20,121 test_case.py[line:41]INFO - 返回结果：{'code': '-2', 'msg': 'sessionId已经失效，请重新登录', 'result': None}
+2021-03-08 15:30:20,122 test_case.py[line:31]INFO - 【开始执行测试用例：CRM登录】
+2021-03-08 15:30:20,122 test_case.py[line:35]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"token":"BA3A7E80C6654E779E055FF3467572A7"', '"rememberMe":0', '"rememberMeSeconds":null', '"loginExpireSeconds":null', '"uuid":"09F6B3E6356E4881D6494F9A60C19E22"}}']
+2021-03-08 15:30:20,122 test_case.py[line:37]INFO - 请求url：http://test.portal.be.lvdatong.com/security/getToken
+2021-03-08 15:30:20,122 test_case.py[line:38]INFO - 请求参数：{'ticket': 'F2546BC6425C4D1E9E5791AAD57A7501', 'uuid': '09F6B3E6356E4881D6494F9A60C19E22'}
+2021-03-08 15:30:20,144 test_case.py[line:41]INFO - 返回结果：{'code': '01002', 'msg': 'SSO验证ticket失败，过期或不存在', 'result': None}

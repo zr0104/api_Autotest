@@ -1,0 +1,20 @@
+2021-03-25 16:10:25,073 test_case.py[line:41]INFO - 【开始执行测试用例：CRM登录-获取ssesionId】
+2021-03-25 16:10:25,073 test_case.py[line:45]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"sessionId":""', '"isLogined":1}}']
+2021-03-25 16:10:25,074 test_case.py[line:47]INFO - 请求url：http://test.passport.be.lvdatong.com/sso/login
+2021-03-25 16:10:25,074 test_case.py[line:48]INFO - 请求参数：{'body': 'Usif52iQB+z97+kf9jcK1/p3X5iNdQKy+/PHcY+vMDzGk7Za0mcWJ8u21ZMQf8WsyysWsV9787L5IjQNNrZBcWFsAzX7Qw3SdZB5IpsnX33C9Fu4PXZGZe9I6wI1WUyteSqYGS6gN8Thu2lCzIiWZuD5zcfoWXUZW3ZFnEh1PkQcN77iekbwxxmaeK+XBLnWoiW9w0/vI3+Qz1e+XDn90L4aEQHhfd4051ZSxKbRZfWf7xX25/cuy8yBJzBXIsziTrXjfRgflbedI/5dffKbHrYZbMs9l1nsyCcE7ZKo5OMDgRGv42y7nyi5onhSgEx/sTkWxwzn3twK8l/9Hs2CoA=='}
+2021-03-25 16:10:25,241 test_case.py[line:51]INFO - 返回结果：{'code': '10003', 'msg': '登录失败', 'result': None}
+2021-03-25 16:10:25,248 test_case.py[line:41]INFO - 【开始执行测试用例：获取ticket】
+2021-03-25 16:10:25,248 test_case.py[line:45]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"ticket":""', '"rememberMe":0}}']
+2021-03-25 16:10:25,248 test_case.py[line:47]INFO - 请求url：http://test.passport.be.lvdatong.com/sso/generateTicket
+2021-03-25 16:10:25,249 test_case.py[line:48]INFO - 请求参数：{'sessionId': '8B617BAB74B74F44ADF31250CA257215'}
+2021-03-25 16:10:25,258 test_case.py[line:51]INFO - 返回结果：{'code': '-2', 'msg': 'sessionId已经失效，请重新登录', 'result': None}
+2021-03-25 16:10:25,262 test_case.py[line:41]INFO - 【开始执行测试用例：CRM登录】
+2021-03-25 16:10:25,262 test_case.py[line:45]INFO - 用例设置检查点：['{"code":"0"', '"msg":"OK"', '"result":{"token":""}}']
+2021-03-25 16:10:25,263 test_case.py[line:47]INFO - 请求url：http://test.portal.be.lvdatong.com/security/getToken
+2021-03-25 16:10:25,263 test_case.py[line:48]INFO - 请求参数：{'ticket': 'F2546BC6425C4D1E9E5791AAD57A7501', 'uuid': '09F6B3E6356E4881D6494F9A60C19E22'}
+2021-03-25 16:10:25,273 test_case.py[line:51]INFO - 返回结果：{'code': '01002', 'msg': 'SSO验证ticket失败，过期或不存在', 'result': None}
+2021-03-25 16:10:25,276 test_case.py[line:41]INFO - 【开始执行测试用例：新增用户】
+2021-03-25 16:10:25,276 test_case.py[line:45]INFO - 用例设置检查点：['{"code":"0"', '"msg":"ok"', '"result":null}']
+2021-03-25 16:10:25,276 test_case.py[line:47]INFO - 请求url：http://test.admin.be.lvdatong.com/customer/addCustomer
+2021-03-25 16:10:25,276 test_case.py[line:48]INFO - 请求参数：{'customerId': '', 'name': '00088', 'shortName': '', 'cusSource': '2', 'cusType': '1', 'license': '123565656550088', 'province': 3624, 'city': 3677, 'district': 3685, 'address': '详细地址详细地址详细地址888', 'legalPerson': '', 'businessScope': '', 'tradeId': '', 'employees': '', 'phone': '', 'email': '', 'fax': '', 'remark': '', 'customerContacts': [{'contactId': '', 'contactName': 'Sen76', 'sex': '1', 'mobile': '13246889988', 'job': '', 'dept': '', 'position': '', 'telephone': '', 'qq': '', 'email': '', 'wechat': '', 'type': '1', 'contactRole': '2'}], 'customerParticipants': [], 'type': '0', 'companyType': '', 'website': '', 'registeredCapital': '', 'anotherPhone': '', 'refereeMobile': '', 'masterMobile': ''}
+2021-03-25 16:10:25,283 test_case.py[line:51]INFO - 返回结果：{'code': '-1', 'msg': '请检查入参，没有传入Token'}
